@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, memberships } from "@/data/site";
+import { site } from "@/data/site";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Mail,
@@ -18,29 +18,7 @@ export function Footer() {
       <div className="container mx-auto max-w-3xl px-4">
         <Card>
           <CardContent className="p-6 md:p-8">
-            <div className="grid items-start gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          {/* A member of */}
-          <div className="lg:col-span-2">
-            <h3 className="mb-4 text-xs font-semibold text-foreground">
-              A member of
-            </h3>
-            <ul className="space-y-2">
-              {memberships.map((m) => (
-                <li key={m.name}>
-                  <Link
-                    href={m.href}
-                    target="_blank"
-                    rel="noopener"
-                    className="flex items-start gap-2 rounded-lg border border-border/40 bg-muted/50 px-3 py-2 text-xs font-normal text-foreground shadow-sm transition hover:bg-muted/70"
-                  >
-                    <span className="line-clamp-2 min-w-0 flex-1">{m.name}</span>
-                    <ExternalLink className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
+            <div className="grid items-start gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {/* Social Links */}
           <div>
             <h3 className="mb-4 text-sm font-medium text-foreground">
